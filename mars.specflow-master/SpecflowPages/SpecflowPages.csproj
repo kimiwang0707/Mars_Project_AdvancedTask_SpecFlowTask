@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.NET.Test.Sdk.16.8.3\build\net40\Microsoft.NET.Test.Sdk.props" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.16.8.3\build\net40\Microsoft.NET.Test.Sdk.props')" />
+  <Import Project="..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.props" Condition="Exists('..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.props')" />
+  <Import Project="..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92827FF8-9AF9-4D71-8C62-3BEDFC0DEEBB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpecflowPages</RootNamespace>
+    <AssemblyName>SpecflowPages</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.3.2.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.3.2\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.29.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.29\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.CodeCoverage.Shim, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeCoverage.16.8.3\lib\net45\Microsoft.VisualStudio.CodeCoverage.Shim.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.11.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.11.5\lib\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.11.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.11.5\lib\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.11.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.11.5\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Libmongocrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Libmongocrypt.1.0.0\lib\net452\MongoDB.Libmongocrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.WithFramework.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="RelevantCodes.ExtentReports, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.2.41.0\lib\RelevantCodes.ExtentReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SeleniumExtras.PageObjects, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.PageObjects.3.11.0\lib\net45\SeleniumExtras.PageObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.23.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.23.0\lib\net45\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net46\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.14.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.14.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Helpers\CommonMethods.cs" />
+    <Compile Include="Helpers\ConstantUtils.cs" />
+    <Compile Include="Helpers\Driver.cs" />
+    <Compile Include="Helpers\MarsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfileSkillsPage.cs" />
+    <Compile Include="Pages\ShareSkillPage.cs" />
+    <Compile Include="Pages\SignUp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\ProfileLangPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Files\TestData.xlsx" />
+    <None Include="Files\TestDataManageListings.xlsx" />
+    <None Include="Files\TestDataShareSkill.xlsx" />
+    <None Include="packages.config" />
+    <None Include="TestReports\Screenshots\Thumbs.db" />
+    <None Include="TestReports\Test_files\css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\WebDriver.ChromeDriver.win32.2.38.0\content\chromedriver.exe">
+      <Link>chromedriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
+    <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
+    <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
+    <Content Include="Files\SampleTest.txt" />
+    <Content Include="TestReports\ReportXML.xml" />
+    <Content Include="TestReports\Screenshots\CertificationDeleted_14-06-2019_620.jpeg" />
+    <Content Include="TestReports\Screenshots\EducationDeleted_14-56-2019_5633.jpeg" />
+    <Content Include="TestReports\Screenshots\HomePage_01-44-2018_4423.jpeg" />
+    <Content Include="TestReports\Screenshots\HomePage_01-48-2018_4847.jpeg" />
+    <Content Include="TestReports\Screenshots\HomePage_01-50-2018_5035.jpeg" />
+    <Content Include="TestReports\Screenshots\HomePage_01-52-2018_5224.jpeg" />
+    <Content Include="TestReports\Screenshots\HomePage_01-55-2018_5501.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageAdded_09-46-2019_4645.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageAdded_09-51-2019_5134.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageAdded_29-34-2018_3408.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageAdded_29-53-2018_5313.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_11-04-2019_412.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_11-17-2019_1753.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_11-44-2019_4458.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_11-52-2019_5229.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_13-21-2019_2128.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_13-26-2019_2615.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_17-24-2019_2446.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_17-47-2019_4725.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_18-11-2019_1130.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageDeleted_18-54-2019_5417.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageUpdated_11-21-2019_2141.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageUpdated_17-15-2019_1512.jpeg" />
+    <Content Include="TestReports\Screenshots\LanguageUpdated_17-47-2019_4724.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-00-2018_013.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-03-2018_309.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-44-2018_4423.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-49-2018_4907.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-51-2018_5121.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-51-2018_5152.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-52-2018_5258.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-56-2018_5637.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_07-58-2018_5826.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_09-46-2019_4646.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_09-48-2019_4814.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_09-49-2019_4947.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_09-51-2019_5135.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_09-53-2019_5309.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_09-53-2019_5320.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_09-56-2019_5619.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-00-2019_057.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-03-2019_321.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-05-2019_544.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-10-2019_1054.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-22-2019_2220.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-27-2019_2716.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-35-2019_3505.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-36-2019_3622.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-38-2019_3845.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-43-2019_4313.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-43-2019_4345.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-46-2019_4629.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-48-2019_4820.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-50-2019_5007.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-50-2019_5050.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-53-2019_5322.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-54-2019_5421.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_10-58-2019_5809.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-04-2019_420.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-10-2018_1050.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-13-2019_1349.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-17-2019_1754.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-21-2019_2107.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-21-2019_2142.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-25-2020_2504.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-28-2019_2855.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-36-2019_3650.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-41-2019_4101.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-45-2019_4501.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-50-2019_5050.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_11-52-2019_5233.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-03-2019_344.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-12-2019_1231.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-12-2019_1238.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-14-2019_1439.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-19-2019_1944.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-21-2019_2135.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-26-2019_2620.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-43-2019_4316.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-44-2019_4451.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_13-50-2019_5029.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-01-2019_157.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-05-2019_542.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-06-2019_621.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-09-2019_918.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-40-2019_4009.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-46-2019_4655.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-51-2019_5143.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-52-2019_5236.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-54-2019_5445.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-56-2019_5634.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_14-57-2019_5712.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_15-16-2020_1643.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-00-2019_011.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-15-2019_1519.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-22-2019_2214.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-26-2019_2614.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-34-2019_3427.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-34-2019_3448.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-42-2019_4208.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-42-2019_4241.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-46-2019_4616.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-46-2019_4659.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-50-2019_5025.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-51-2019_5146.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_16-59-2019_5935.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_17-15-2019_1523.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_17-25-2019_2553.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_18-11-2019_1135.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_18-44-2018_4449.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_18-47-2019_4715.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_18-49-2019_4934.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_18-52-2019_5237.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_18-54-2019_5419.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_24-03-2018_301.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_24-59-2018_5908.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_28-01-2018_154.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_28-05-2018_517.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_29-30-2018_3002.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_29-34-2018_3409.jpeg" />
+    <Content Include="TestReports\Screenshots\Report_29-53-2018_5314.jpeg" />
+    <Content Include="TestReports\Screenshots\SearchProp_07-03-2018_308.jpeg" />
+    <Content Include="TestReports\Screenshots\SearchProp_18-44-2018_4447.jpeg" />
+    <Content Include="TestReports\Screenshots\SearchProp_28-05-2018_516.jpeg" />
+    <Content Include="TestReports\Screenshots\SkillDeleted_13-03-2019_336.jpeg" />
+    <Content Include="TestReports\Test.html" />
+    <Content Include="TestReports\Test_files\1.png" />
+    <Content Include="TestReports\Test_files\2.png" />
+    <Content Include="TestReports\Test_files\extent.css" />
+    <Content Include="TestReports\Test_files\extent.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\MarsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MarsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestReports\Screenshots\Kimi\" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets'))" />
+    <Error Condition="!Exists('..\packages\MongoDB.Driver.Core.2.11.5\build\MongoDB.Driver.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MongoDB.Driver.Core.2.11.5\build\MongoDB.Driver.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.17.0\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.87.0.4280.8800\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.87.0.4280.8800\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NET.Test.Sdk.16.8.3\build\net40\Microsoft.NET.Test.Sdk.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NET.Test.Sdk.16.8.3\build\net40\Microsoft.NET.Test.Sdk.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NET.Test.Sdk.16.8.3\build\net40\Microsoft.NET.Test.Sdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NET.Test.Sdk.16.8.3\build\net40\Microsoft.NET.Test.Sdk.targets'))" />
+  </Target>
+  <Import Project="..\packages\MongoDB.Driver.Core.2.11.5\build\MongoDB.Driver.Core.targets" Condition="Exists('..\packages\MongoDB.Driver.Core.2.11.5\build\MongoDB.Driver.Core.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.87.0.4280.8800\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.87.0.4280.8800\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('..\packages\Microsoft.CodeCoverage.16.8.3\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
+  <Import Project="..\packages\Microsoft.NET.Test.Sdk.16.8.3\build\net40\Microsoft.NET.Test.Sdk.targets" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.16.8.3\build\net40\Microsoft.NET.Test.Sdk.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
