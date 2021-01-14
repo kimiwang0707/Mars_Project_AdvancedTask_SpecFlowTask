@@ -126,6 +126,7 @@ E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\ExcelDataReader.dll
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\HtmlAgilityPack.dll
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\MongoDB.Bson.dll
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\MongoDB.Driver.Core.dll
@@ -162,11 +163,12 @@ E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\WebDriver.xml
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\WebDriver.Support.xml
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\Interop.AutoItX3Lib.dll
+E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\SpecflowPages.csproj.ResolveComReference.cache
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\SpecflowPages.Helpers.MarsResource.resources
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\SpecflowPages.csproj.GenerateResource.cache
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\SpecflowPages.csproj.CoreCompileInputs.cache
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\SpecflowPages.csproj.CopyComplete
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\SpecflowPages.dll
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\SpecflowPages.pdb
-E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 E:\GitHub\Advance Task_SpecFlow_MarsKimi\mars.specflow-master\SpecflowPages\obj\Debug\SpecflowPages.csprojAssemblyReference.cache

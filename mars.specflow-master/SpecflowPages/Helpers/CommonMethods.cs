@@ -161,28 +161,13 @@ namespace SpecflowPages
         public static ExtentTest test;
         public static ExtentReports extent;
         public static void ExtentReports()
-        {
-            extent = new ExtentReports(ConstantUtils.ReportPath, false, DisplayOrder.NewestFirst);
-            extent.LoadConfig(ConstantUtils.ReportXMLPath);
+        {         
+                extent = new ExtentReports(ConstantUtils.ReportPath, false, DisplayOrder.NewestFirst);
+                extent.LoadConfig(ConstantUtils.ReportXMLPath);           
         }
 
         #endregion
 
-
-        //Scroll the webpage
-        #region Scroll the webpage
-        //public static void ScrollToTop()
-        //{
-        //    Actions a = new Actions(Base.driver);
-        //    a.SendKeys(Keys.Home).Perform();
-        //}
-
-        //public static void ScrollToBottom()
-        //{
-        //    Actions a = new Actions(Base.driver);
-        //    a.SendKeys(Keys.End).Perform();
-        //}
-        #endregion
 
 
         //Element Present
@@ -300,7 +285,22 @@ namespace SpecflowPages
             wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
         }
 
-#endregion
+        #endregion
 
+
+
+        #region Scroll the webpage
+        public static void ScrollToTop()
+        {
+            Actions a = new Actions(Driver.driver);
+            a.SendKeys(Keys.Home).Perform();
+        }
+
+        public static void ScrollToBottom()
+        {
+            Actions a = new Actions(Driver.driver);
+            a.SendKeys(Keys.End).Perform();
+        }
+        #endregion
     }
 }

@@ -23,8 +23,8 @@
     <reportHeadline>Mars Project</reportHeadline>
 
     <!-- global date format override -->
-    <!-- defaults to yyyy-MM-dd -->
-    <dateFormat>dd-MM-yyyy</dateFormat>
+    <!-- defaults to dd-MM-yyyy -->
+    <dateFormat>yyyy-MM-dd</dateFormat>
 
     <!-- global time format override -->
     <!-- defaults to HH:mm:ss -->

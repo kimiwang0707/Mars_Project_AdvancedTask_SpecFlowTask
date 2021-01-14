@@ -101,10 +101,25 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AcceptanceTest\Features\Chat\Chat.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chat.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\Features\ManageListings\ManageListings.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageListings.feature</DependentUpon>
+    </Compile>
     <Compile Include="AcceptanceTest\Features\ManageSkills\ShareSkill.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShareSkill.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTest\Features\Notifications\NotificationShowLessLoadMore.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotificationShowLessLoadMore.feature</DependentUpon>
     </Compile>
     <Compile Include="AcceptanceTest\Features\Profile\Certifications.feature.cs">
       <AutoGen>True</AutoGen>
@@ -136,6 +151,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SignUp.feature</DependentUpon>
     </Compile>
+    <Compile Include="AcceptanceTest\StepDefinitions\ChatSteps.cs" />
+    <Compile Include="AcceptanceTest\StepDefinitions\ManageListingsSteps.cs" />
+    <Compile Include="AcceptanceTest\StepDefinitions\NotificationShowLessLoadMoreSteps.cs" />
     <Compile Include="AcceptanceTest\StepDefinitions\ProfileLanguageSteps.cs" />
     <Compile Include="AcceptanceTest\StepDefinitions\ShareSkillSteps.cs" />
     <Compile Include="AcceptanceTest\StepDefinitions\SignInSteps.cs" />
@@ -145,9 +163,21 @@
     <Compile Include="Base\Start.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AcceptanceTest\Features\Chat\Chat.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Chat.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTest\Features\ManageListings\ManageListings.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ManageListings.feature.cs</LastGenOutput>
+    </None>
     <None Include="AcceptanceTest\Features\ManageSkills\ShareSkill.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ShareSkill.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTest\Features\Notifications\NotificationShowLessLoadMore.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NotificationShowLessLoadMore.feature.cs</LastGenOutput>
     </None>
     <None Include="AcceptanceTest\Features\Profile\Certifications.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -182,12 +212,7 @@
       <Name>SpecflowPages</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AcceptanceTest\Features\Chat\" />
-    <Folder Include="AcceptanceTest\Features\ManageListings\" />
-    <Folder Include="AcceptanceTest\Features\ManageRequests\" />
-    <Folder Include="AcceptanceTest\Features\Notifications\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

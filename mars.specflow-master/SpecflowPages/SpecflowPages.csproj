@@ -158,6 +158,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MarsResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Chat.cs" />
+    <Compile Include="Pages\ManageListings.cs" />
+    <Compile Include="Pages\NotificationPage.cs" />
     <Compile Include="Pages\ProfileSkillsPage.cs" />
     <Compile Include="Pages\ShareSkillPage.cs" />
     <Compile Include="Pages\SignUp.cs" />
@@ -323,6 +326,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TestReports\Screenshots\Kimi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AutoItX3Lib">
+      <Guid>{F8937E53-D444-4E71-9275-35B64210CC3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
